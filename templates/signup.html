@@ -1,0 +1,52 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<form action="/welcome" method='POST'>
+  <table>
+    <tbody>
+      <tr>
+        <td>
+          <label>
+            Username
+            <input type='text' name='username' value='{{username}}'>
+          </label>
+          <p style="display:inline" class ='error'>{{user_error}}</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <label>
+            Password
+            <input type="password" name='password' value='{{password}}'>
+          </label>
+          <p style="display:inline" class ='error'>{{password_error}}</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <label>
+            Verify Password
+            <input type='password' name='verified' value='{{verified}}'>
+          </label>
+          <p style="display:inline" class ='error'>{{verified_error}}</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <label>
+            Email(optional)
+            <input type="text" name='email' value='{{email}}'>
+          </label>
+          <p style="display:inline" class ='error'>{{email_error}}</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <input type='submit'/>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</form>
+{% endblock %}
